@@ -1,5 +1,10 @@
 {{ define "main" }}
 
+<script src="/css/yall.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", yall);
+</script>
+
 	<div class="photos-grid-container" style="display: grid; grid-column-gap: 15px; grid-row-gap: 15px; grid-template-columns: 33% 33% 33%;">
 
 	{{- $list := where .Pages ".Params.photos" "!=" nil -}}
@@ -8,7 +13,7 @@
     {{- $url := .Permalink -}}
 		{{ range .Params.photos }}
 			<a href="{{ $url }}">
-				<img src="{{ . }}" width="300" height="300" style="border-radius: 5px; max-width: 100%; height: auto;" class="photos-grid-item" loading="lazy" />
+				<img src="" data-src="{{ . }}" width="300" height="300" style="border-radius: 5px; max-width: 100%; height: auto;" class="photos-grid-item lazy" loading="lazy" />
 			</a>
 		{{ end }}
 	{{ end }}
