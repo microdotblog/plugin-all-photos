@@ -3,6 +3,6 @@
 	"title": "All photos",
 	"description": "Changes the Photos page to include all photos in multi-photo posts, not just first photo.",
 	"includes": [
-		"/css/yall.js"
+		"/js/yall.js"
 	]
 }
